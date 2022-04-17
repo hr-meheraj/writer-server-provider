@@ -69,6 +69,10 @@ function Login() {
             return <LoadingSpinner/>
         }
     }
+
+    const handleForgotPassword = () => {
+        
+    }
     // Navigate Previous Tab if user Login 
     const navigate = useNavigate();
     const location = useLocation();
@@ -128,6 +132,7 @@ function Login() {
                     <div className=''>
                         <label htmlFor='password' className='w-full block font-bold py-[5px]'>Password:</label>
                         <input type='password' autoComplete="false" onChange={handlePasswordChange} id='password' required placeholder='Enter your password' className=' py-2 px-4 text-[18px] block w-full border rounded-md shadow-lg ' />
+                        <p className='text-blue-800 font-semibold py-2 cursor-pointer transition-all hover:text-blue-900' onClick={handleForgotPassword}>Forgot Your Password</p>
                     </div>
                     {
                       userInfoErr?.passwordErr && <p className='text-red-900 font-semibold pt-2'>{userInfoErr.passwordErr}</p>
