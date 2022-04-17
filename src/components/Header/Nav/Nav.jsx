@@ -55,7 +55,7 @@ function Nav() {
                 <div className={` z-[50] gap-[25px] md:static right-0 left-0 z-[50] transition-all justify-center flex  md:flex-row  items-center
                    ${isOpen ? " absolute top-0 bottom-0  gap-[30px]   bg-[#012333de]  flex-col w-full h-screen " : " absolute top-[-990px]"}`}>
                     <div className={`flex gap-[15px]  ${isOpen && " flex flex-col gap-[20px] text-[25px] "}`}>
-                        <NavLink className='hover:text-[#0ffada]   ' style={({ isActive }) =>isActive ? {color:'#0ffada',fontWeight:"500"} : undefined} onClick={() => setIsOpen(false)} onClick={() => setIsOpen(false)} to='/'>Getting Star</NavLink>
+                        <NavLink className='hover:text-[#0ffada]   ' style={({ isActive }) =>isActive ? {color:'#0ffada',fontWeight:"500"} : undefined} onClick={() => setIsOpen(false)} onClick={() => setIsOpen(false)} to='/'>Getting Started</NavLink>
                         <NavLink className='hover:text-[#0ffada]   ' style={({ isActive }) =>isActive ? {color:'#0ffada',fontWeight:"500"} : undefined} onClick={() => setIsOpen(false)} onClick={() => setIsOpen(false)} to='/checkout'>Checkout</NavLink>
                         <NavLink className='hover:text-[#0ffada]   ' style={({ isActive }) =>isActive ? {color:'#0ffada',fontWeight:"500"} : undefined} onClick={() => setIsOpen(false)} onClick={() => setIsOpen(false)} to='/blogs'>Blogs</NavLink>
                         <NavLink className='hover:text-[#0ffada]   ' style={({ isActive }) =>isActive ? {color:'#0ffada',fontWeight:"500"} : undefined} onClick={() => setIsOpen(false)} onClick={() => setIsOpen(false)} to='/about-us'> About us </NavLink>
