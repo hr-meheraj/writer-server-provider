@@ -11,14 +11,18 @@ import NotFound from './components/Pages/NotFound/NotFound';
 import Login from './components/Pages/Authentication/Login/Login';
 import RequireAuth from './components/Pages/Authentication/RequireAuth/RequireAuth';
 import ForgotPassword from './components/Pages/ForgotPassword/ForgotPassword';
+import { createContext, useState } from 'react';
+// export const ServicesContext = createContext();
 function App() {
+    //const [products, setProducts] = useState([]);
   return (
-    <div>
+    <>
         <Nav/> 
        <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/blogs' element={<Blogs/>}/>
-            <Route path='/checkout' element={<RequireAuth><Checkout/></RequireAuth>}/>
+            <Route path='/checkout' element={<RequireAuth><Services/></RequireAuth>}/>
+            <Route path='/checkout/:productId' element={<RequireAuth><Checkout/></RequireAuth>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>
             <Route path='/about-us' element={<AboutUs/>}/>
@@ -26,7 +30,7 @@ function App() {
             <Route path='/services' element={<Services/>}/>
             <Route path='*' element={<NotFound/>}/>
         </Routes> 
-    </div>
+    </>
   );
 }
 

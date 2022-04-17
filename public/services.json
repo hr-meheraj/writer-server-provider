@@ -1,5 +1,6 @@
 [
     {
+        "id" : 1,
         "name" : "Book Writer",
         "price" : 6000,
         "imgURL" : "https://i.ibb.co/xsz5gQg/undraw-Notebook-re-id0r.png",
@@ -14,6 +15,7 @@
         ]
     },
     {
+        "id" : 2,
         "name" : "Article Writer",
         "price" : 300,
         "imgURL" : "https://i.ibb.co/P6SmsMD/undraw-Publish-article-re-3x8h.png",
@@ -28,6 +30,7 @@
         ]
     },
     {
+        "id" : 3,
         "name" : "Reserach Journal",
         "price" : 1200,
         "imgURL" : "https://i.ibb.co/m5mGw6G/undraw-Researching-re-fuod.png",

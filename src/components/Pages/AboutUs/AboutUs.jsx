@@ -1,7 +1,9 @@
 import React from 'react'
+import Footer from '../../Shared/Footer/Footer'
 
 function AboutUs() {
     return (
+        <>
         <div className='md:w-9/12 mx-auto w-11/12 py-[20px]'>
             <h1 className='text-center py-2 font-semibold text-green-800'>About </h1>
             <div className='p-4 shadow-lg rounded-md mt-[30px]'>
@@ -19,6 +21,8 @@ function AboutUs() {
                 </div>
             </div>
         </div>
+        <Footer/>
+        </>
     )
 }
 

@@ -14,7 +14,7 @@ function Services() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]'>
                 {
                     loading ? <LoadingSpinner /> : (
-                        data && data?.map((eachData) => <ServiceData key={eachData.price} data={eachData} />)
+                        data && data?.map((eachData) => <ServiceData key={eachData.id} data={eachData} />)
                     )
                 }
 
@@ -24,7 +24,7 @@ function Services() {
 }
 
 const ServiceData = ({ data }) => {
-    const { name, price, info, description, imgURL } = data;
+    const { name, price, info, description, imgURL,id } = data;
     const handleProductNavigate = (data) => {
       
     }
@@ -36,15 +36,15 @@ const ServiceData = ({ data }) => {
             <hr />
             <ul className='list-disc px-6 py-2'>
                 {
-                    info?.map(eachInfo => {
+                    info?.map((eachInfo,index) => {
                         return (
-                            <li>{eachInfo}</li>
+                            <li key={index}>{eachInfo}</li>
                         )
                     })
                 }
             </ul>
             <p className='font-semibold text-7xl text-center py-4'>${price}</p>
-            <Link to='/checkout'> <button onClick={() => handleProductNavigate(data)} className='btn-blue w-full absolue left-0 right-0 hover:bg-blue-900 transition-all flex justify-center items-center gap-[15px]'><span>Buy Now</span><span><svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <Link to={`/checkout/${id}`}> <button onClick={() => handleProductNavigate(data)} className='btn-blue w-full absolue left-0 right-0 hover:bg-blue-900 transition-all flex justify-center items-center gap-[15px]'><span>Buy Now</span><span><svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clipRule="evenodd" />
             </svg></span></button> </Link>
         </div>

@@ -1,13 +1,15 @@
 import React from 'react'
+import Footer from '../../Shared/Footer/Footer'
 
 function Blogs() {
     return (
+        <>
         <div className='container mx-auto w-11/12 py-[20px] qna-container'>
             <h1 className='text-center text-2xl md:font-5xl py-4 text-blue-900 font-semibold'>Questions and Answers </h1>
             
             <div className='py-2'>
                 <p className='text-3xl font-normal'> <strong className="font-semibold">Question: </strong>What is the different between Authrorized and Authentication? </p><br/>
-                <p className='text[17px] justify'> <strong className='font-semibold'>Answer:</strong>Authentication is the Process of Verifying Someone is, and the Authorizeation is the process of verifying authenticated use accessable thing. Like a user a Registration our website by using Google - this is the <spna className='text-green-700 font-semibold'>Authentication</spna>. And If the user cann't buy our course then he can't access our course. When the user buy our course then user can access private things. And that's called the <span className='text-green-700 font-semibold'>Authorization</span> </p><br/><br/>
+                <p className='text[17px] justify'> <strong className='font-semibold'>Answer:</strong>Authentication is the Process of Verifying Someone is, and the Authorizeation is the process of verifying authenticated use accessable thing. Like a user a Registration our website by using Google - this is the <span className='text-green-700 font-semibold'>Authentication</span>. And If the user cann't buy our course then he can't access our course. When the user buy our course then user can access private things. And that's called the <span className='text-green-700 font-semibold'>Authorization</span> </p><br/><br/>
             </div>
 
             <div className='py-2'>
@@ -44,6 +46,8 @@ function Blogs() {
             </div>
             
         </div>
+        <Footer/>
+        </>
     )
 }
 
