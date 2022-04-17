@@ -10,6 +10,7 @@ import AboutUs from './components/Pages/AboutUs/AboutUs';
 import NotFound from './components/Pages/NotFound/NotFound';
 import Login from './components/Pages/Authentication/Login/Login';
 import RequireAuth from './components/Pages/Authentication/RequireAuth/RequireAuth';
+import ForgotPassword from './components/Pages/ForgotPassword/ForgotPassword';
 function App() {
   return (
     <div>
@@ -21,6 +22,7 @@ function App() {
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>
             <Route path='/about-us' element={<AboutUs/>}/>
+            <Route path='/reset-password' element={<ForgotPassword/>}/>
             <Route path='/services' element={<Services/>}/>
             <Route path='*' element={<NotFound/>}/>
         </Routes> 

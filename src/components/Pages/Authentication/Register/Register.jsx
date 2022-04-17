@@ -46,7 +46,7 @@ function Register() {
     }
     const handleConfirmPassword = (e) => {
         const pass = e.target.value;
-        if(pass == userInfo.password){
+        if(pass === userInfo.password){
             setUserInfo({ ...userInfo,  confirmPassword : e.target.value });
             setUserInfoErr({ ...userInfoErr, passwordErr: "" });
         }else{
@@ -56,8 +56,6 @@ function Register() {
     }
     const handleRegisterSubmit = e => {
         e.preventDefault();
-         console.log(userInfo.password , userInfo.confirmPassword);
-        alert("Submit");
         if(userInfo.email && userInfo.password === userInfo.confirmPassword){
             createUserWithEmailAndPassword(userInfo.email, userInfo.password);
             console.log(user);
