@@ -6,7 +6,7 @@ import LoadingSpinner from '../../Shared/LoadingSpinner';
 function Services() {
     const { data, loading, err } = useFetch('services.json');
     if (err) {
-        return alert("hello there");
+        return alert("Something went wrong on the Services.json url");
     }
     return (
         <div className='container mx-auto'>

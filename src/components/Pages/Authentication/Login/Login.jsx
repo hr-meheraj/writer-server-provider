@@ -3,7 +3,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import auth from '../../../../firebase.config';
 import { useSignInWithEmailAndPassword , useSignInWithGoogle} from 'react-firebase-hooks/auth';
 import {useState} from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import LoadingSpinner from '../../../Shared/LoadingSpinner';
 function Login() {
     const [userInfo , setUserInfo]= useState({
@@ -58,17 +58,34 @@ function Login() {
                 });
             }
         
-        if(loading || googleLoading){
+        if(loading){
             return <LoadingSpinner/>
         }
     }
 
     const handleGoogleLogin = () => {
         signInWithGoogle();
-        if(loading || googleLoading){
+        if(googleLoading){
             return <LoadingSpinner/>
         }
     }
+    // Navigate Previous Tab if user Login 
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+
+    useEffect(() => {
+        if (user) {
+            navigate(from);
+        }
+    }, [user]);
+
+    useEffect(() => {
+        if(googleUser){
+            navigate(from);
+        }
+    },[googleUser])
+
 
     useEffect(() => {
         const finalError = emailErr|| googleErr;
@@ -91,7 +108,6 @@ function Login() {
                     break;
 
                 default:
-                    console.dir(finalError.code)
                     toast.error("something went wrong")
             }
         }
