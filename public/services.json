@@ -1,0 +1,44 @@
+[
+    {
+        "name" : "Book Writer",
+        "price" : 6000,
+        "imgURL" : "https://i.ibb.co/xsz5gQg/undraw-Notebook-re-id0r.png",
+        "description" : "Writing a book a not an easy task, but experience writer wrie book with more efficient way that reader read peacefully.So Get started",
+        "info" : [
+            "25000-60000 words",
+            "Grammtical Checker",
+            "Reference",
+            "Unique",
+            "Spell Cheker",
+            "Cover Design"
+        ]
+    },
+    {
+        "name" : "Article Writer",
+        "price" : 300,
+        "imgURL" : "https://i.ibb.co/P6SmsMD/undraw-Publish-article-re-3x8h.png",
+        "description" : "Need a Article for your webiste? Don't worry We are here not copywrite and unique article create for you grammaticall improvement and SEO friendly",
+        "info" : [
+            "1000-6000 words",
+            "Gramatical Confirmation",
+            "Reference",
+            "SEO Friendly",
+            "Unique",
+            "Best Practices"
+        ]
+    },
+    {
+        "name" : "Reserach Journal",
+        "price" : 1200,
+        "imgURL" : "https://i.ibb.co/m5mGw6G/undraw-Researching-re-fuod.png",
+        "description" : "We are here 20 years of internet experience will provide you with powerfull takeable reserach make it for journal or a university. That's our Goal.",
+        "info" : [
+            "4000-15000 words",
+            "Grammatical Provider",
+            "Reference",
+            "Content Relative",
+            "Reserach Info",
+            "Unique"
+        ]
+    }
+]
