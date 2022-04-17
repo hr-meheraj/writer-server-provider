@@ -28,6 +28,12 @@ h3{
 h4{
     font-size:1em;
 }
+.qna-container{
+    font-size:22px;
+}
+.qna-container li {
+    font-size:20px;
+}
 
 /* Loading Spinner Custom CSSS */ 
 .service-card{

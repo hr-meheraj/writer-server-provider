@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import {useSendPasswordResetEmail} from 'react-firebase-hooks/auth'
 import auth from '../../../firebase.config';
+import toast, { Toaster } from 'react-hot-toast';
 function ForgotPassword() {
     const [email, setEmail] = useState("");
     const [sendPasswordResetEmail, sending, error] = useSendPasswordResetEmail(
@@ -15,18 +16,26 @@ function ForgotPassword() {
             setEmail("");
         }
     }
-    const handleForgotSubmit = (e) => {
+    const handleForgotSubmit = async (e) => {
         e.preventDefault();
         if(email){
-            sendPasswordResetEmail(email);
+            await sendPasswordResetEmail(email);
+            toast("Sending Email, Check inbox!");
+
+        }else{
+            toast.err("Please Provide a Valid EmaiL");
         }
     }
     return (
-        <div className='w-full h-screen'>
-            <form onSubmit={handleForgotSubmit} className='max-w-10/12 md:w-[520px]'>
-                <input type='email' required onChange={handleEmailChange} className='rounded-md shadow-lg py-2 px-4 font-semibold block w-full'/><br/>
-                <input value="Reset Password" type='submit' className='btn-blue block w-full rounded-md shadow-lg' />
+        <div className='flex justify-center p-[100px]'>
+            <form onSubmit={handleForgotSubmit} className='p-4 shadow-md my-[100px] mx-auto max-w-10/12 md:w-[520px]'>
+                <input type='email' required onChange={handleEmailChange} placeholder='enter your email to reset' className='rounded-md shadow-lg py-2 px-4 font-semibold block w-full'/><br/>
+                <input value="Reset Password" type='submit' className='btn-blue block w-full rounded-md shadow-lg cursor-pointer hover:bg-blue-900' />
             </form>
+        <Toaster
+           position="top-right"
+           reverseOrder={false}
+           />
         </div>
     )
 }
