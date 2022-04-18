@@ -9,10 +9,10 @@
   - And Some Pages with contains Sign up and Login
   
 ## Material Are uses in this site : 
-  - For Styling [https://tailwindcss.com](TailwindCSS)
-  - For Routing - [https://reactrouter.com/docs/en/v6](React Router)
-  - For Authentication and Hosting - [https://firebase.google.com](Firebase)
-  - For Notify and Toast [https://react-hot-toast.com/](React Hot Toast)
+  - For Styling [TailwindCSS](https://tailwindcss.com)
+  - For Routing - [React Router](https://reactrouter.com/docs/en/v6)
+  - For Authentication and Hosting - [Firebase](https://firebase.google.com)
+  - For Notify and Toast [React Hot Toast](https://react-hot-toast.com/)
   
 
  ![Home Page](https://i.ibb.co/gTTjmdr/download.png)
